@@ -203,9 +203,13 @@ class LINE extends LineAPI {
         }
 
         if(txt == 'Assalamualaikum' || txt == 'sya') {
-            this._sendMessage(seq, 'Waalaikumsalam, mari ngobrol :)');
+            this._sendMessage(seq, 'Waalaikumsalam, mari ngobrol kk :)');
         }
-
+	    
+        if(txt == 'Pagi' || txt == 'sya') {
+            this._sendMessage(seq, 'pagi juga kk, jangan lupa sarapan biar kuat ngadepin kenyataan :)');
+        }
+	    
         if(txt == 'speed') {
             const curTime = (Date.now() / 1000);
             await this._sendMessage(seq,'processing....');
@@ -229,7 +233,7 @@ class LINE extends LineAPI {
         }
 
         if(txt == 'setpoint') {
-            this._sendMessage(seq, `Setpoint for check reader.`);
+            this._sendMessage(seq, `Setpoint for cctv.`);
             this.removeReaderByGroup(seq.to);
         }
 
@@ -250,7 +254,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq,seq.contentMetadata.mid);
         }
 
-        if(txt == 'setpoint for check reader .') {
+        if(txt == 'Setpoint for cctv .') {
             this.searchReader(seq);
         }
 
