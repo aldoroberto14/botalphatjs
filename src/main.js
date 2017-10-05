@@ -202,8 +202,8 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'halo' || txt == 'sya') {
-            this._sendMessage(seq, 'halo disini tasya :)');
+        if(txt == 'Assalamualaikum' || txt == 'sya') {
+            this._sendMessage(seq, 'Waalaikumsalam, mari ngobrol :)');
         }
 
         if(txt == 'speed') {
@@ -239,7 +239,7 @@ class LINE extends LineAPI {
         }  
 
         if(txt == 'cctv'){
-            let rec = await this.recheck(this.checkReader,seq.to);
+            let rec = await this.cctv(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
             await this._sendMessage(seq,mentions.names.join(''));
