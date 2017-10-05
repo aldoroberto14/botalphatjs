@@ -204,11 +204,7 @@ class LINE extends LineAPI {
 
         if(txt == 'Assalamualaikum' || txt == 'sya') {
             this._sendMessage(seq, 'Waalaikumsalam, mari ngobrol kk :)');
-        }
-	    
-        if(txt == 'Pagi' || txt == 'sya') {
-            this._sendMessage(seq, 'pagi juga kk, jangan lupa sarapan biar kuat ngadepin kenyataan :)');
-        }
+	}
 	    
         if(txt == 'speed') {
             const curTime = (Date.now() / 1000);
